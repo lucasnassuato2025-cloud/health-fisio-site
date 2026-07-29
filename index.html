@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Health - Fisioterapia e Bem Estar | Guarujá</title>
+<meta name="description" content="Fisioterapia, Pilates e Estética Avançada em Guarujá. Atendemos toda a Baixada Santista. Aceitamos Totalpass e Wellhub. Agende pelo WhatsApp.">
+<meta property="og:title" content="Health - Fisioterapia e Bem Estar | Guarujá">
+<meta property="og:description" content="Fisioterapia, Pilates e Estética Avançada em Guarujá, com atendimento humanizado para toda a Baixada Santista.">
+<meta property="og:type" content="business.business">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue: #1E4FD8;
+    --blue-deep: #142F8A;
+    --blue-pale: #EDF1FD;
+    --coral: #F4796B;
+    --coral-pale: #FDEAE7;
+    --ink: #14192B;
+    --ink-soft: #545B72;
+    --paper: #FFFFFF;
+    --mist: #F7F8FC;
+    --line: #E6E8F2;
+    --radius: 20px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  h1,h2,h3{font-family:'Fraunces',serif;margin:0;line-height:1.08;letter-spacing:-0.01em;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);}
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--coral);display:inline-block;}
+
+  /* Reveal-on-scroll */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* Trust bar */
+  .trust-bar{display:flex;gap:34px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);}
+  .trust-stat{display:flex;flex-direction:column;}
+  .trust-stat b{font-family:'Fraunces',serif;font-size:26px;color:var(--blue);line-height:1;}
+  .trust-stat span{font-size:12.5px;color:var(--ink-soft);margin-top:5px;font-weight:600;}
+
+  ::selection{background:var(--coral);color:#fff;}
+
+  .img-placeholder{
+    width:100%;height:100%;border-radius:inherit;
+    background:linear-gradient(135deg, var(--blue-pale) 0%, var(--coral-pale) 100%);
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;
+  }
+  .img-placeholder span{font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--blue-deep);opacity:.75;line-height:1.4;}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1180px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{height:40px;width:auto;}
+  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:16.5px;color:var(--ink);line-height:1.15;}
+  .brand-name span{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:10.5px;color:var(--coral);letter-spacing:.04em;text-transform:uppercase;}
+  @media(max-width:480px){.brand-name{font-size:14px;}}
+  .navlinks{display:flex;gap:6px;font-weight:600;font-size:14.5px;color:var(--ink-soft);}
+  .navlinks button{background:none;border:none;font:inherit;color:inherit;cursor:pointer;padding:9px 14px;border-radius:100px;transition:background .15s,color .15s;}
+  .navlinks button:hover{background:var(--blue-pale);color:var(--blue);}
+  .navlinks button.active{background:var(--blue);color:#fff;}
+  .navcta{display:flex;gap:10px;align-items:center;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:100px;font-weight:700;font-size:14px;white-space:nowrap;transition:transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s ease, background .18s ease;border:none;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.01em;}
+  .btn-primary{background:linear-gradient(135deg,var(--blue), var(--blue-deep));color:#fff;box-shadow:0 12px 26px -8px rgba(30,79,216,.55);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -8px rgba(30,79,216,.65);}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:transparent;}
+  .btn-ghost:hover{border-color:var(--coral);color:var(--coral);transform:translateY(-2px);}
+  .btn-coral{background:linear-gradient(135deg,var(--coral), #E85B4E);color:#fff;box-shadow:0 12px 26px -8px rgba(244,121,107,.5);}
+  .btn-coral:hover{transform:translateY(-2px);box-shadow:0 16px 32px -8px rgba(244,121,107,.6);}
+  .btn-block{width:100%;justify-content:center;}
+
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;}
+  .hamburger span{width:22px;height:2px;background:var(--ink);border-radius:2px;}
+
+  @media(max-width:900px){
+    .navlinks{display:none;}
+    .navcta .btn-ghost{display:none;}
+    .hamburger{display:flex;}
+  }
+
+  /* MOBILE MENU OVERLAY */
+  .mobile-menu{
+    position:fixed;inset:0;background:#fff;z-index:100;display:none;flex-direction:column;
+    padding:20px 24px calc(24px + env(safe-area-inset-bottom));
+  }
+  .mobile-menu.open{display:flex;}
+  .mm-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;}
+  .mm-top img{height:38px;}
+  .mm-close{background:none;border:none;font-size:26px;line-height:1;padding:6px;cursor:pointer;color:var(--ink);}
+  .mm-links{display:flex;flex-direction:column;gap:6px;}
+  .mm-links button{
+    text-align:left;background:none;border:none;font-family:'Fraunces',serif;font-size:26px;
+    padding:14px 4px;border-bottom:1px solid var(--line);color:var(--ink);cursor:pointer;
+  }
+  .mm-links button.active{color:var(--blue);}
+  .mm-ctas{margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:24px;}
+
+  /* PAGES */
+  main{min-height:60vh;}
+  .page{display:none;}
+  .page.active{display:block;animation:fadein .35s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+  section{padding:64px 0;}
+  .sec-head{max-width:640px;margin-bottom:40px;}
+  .sec-head h2{font-size:clamp(26px,3.4vw,38px);margin-top:12px;}
+  .sec-head p{color:var(--ink-soft);font-size:16px;margin-top:12px;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#F9FAFD 0%, var(--mist) 100%);}
+  .hero-blob{position:absolute;top:-160px;right:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 30% 30%, var(--blue-pale), transparent 72%);}
+  .hero-blob-2{position:absolute;bottom:-120px;left:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 60% 40%, var(--coral-pale), transparent 70%);opacity:.6;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:60px 24px 68px;max-width:1180px;margin:0 auto;position:relative;}
+  .hero h1{font-size:clamp(34px,4.8vw,56px);font-weight:600;margin:18px 0 20px;color:var(--ink);}
+  .hero h1 em{font-style:italic;color:var(--blue);font-weight:500;}
+  .hero p.lead{font-size:17.5px;color:var(--ink-soft);max-width:480px;margin-bottom:28px;line-height:1.6;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-badges{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap;}
+  .pill{font-size:13px;font-weight:700;color:var(--blue);background:var(--blue-pale);padding:8px 14px;border-radius:100px;}
+
+  /* HERO PHOTO — sized to the real photo ratio so nothing is cropped */
+  .hero-photo-frame{
+    position:relative;border-radius:32px;overflow:hidden;background:linear-gradient(160deg,var(--blue-pale), #fff 60%);
+    box-shadow:0 36px 70px -24px rgba(20,25,43,.3), 0 0 0 8px #fff, 0 0 0 9px var(--line);
+    aspect-ratio: 572 / 524;
+    max-width:400px;margin:0 auto;
+  }
+  .hero-photo-frame img{width:100%;height:100%;object-fit:contain;object-position:center bottom;}
+  .hero-tag{
+    position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);
+    border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 12px 30px -12px rgba(20,25,43,.25);
+  }
+  .hero-tag .dot{width:10px;height:10px;border-radius:50%;background:var(--coral);flex:none;}
+  .hero-tag span{font-size:13px;font-weight:600;color:var(--ink-soft);}
+
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;padding-top:32px;}
+    .hero-photo-frame{order:-1;max-width:280px;}
+  }
+
+  /* PAGE INTRO STRIP (used at top of secondary pages) */
+  .page-intro{background:var(--mist);padding:52px 0 36px;border-bottom:1px solid var(--line);}
+  .page-intro .eyebrow{margin-bottom:10px;}
+  .page-intro h1{font-size:clamp(28px,4vw,42px);}
+  .page-intro p{color:var(--ink-soft);font-size:16px;margin-top:12px;max-width:560px;}
+
+  /* SERVICES */
+  .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .service-card{border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, border-color .25s ease;background:#fff;position:relative;}
+  .service-card:hover{transform:translateY(-7px);box-shadow:0 26px 46px -18px rgba(20,25,43,.2);border-color:transparent;}
+  .service-icon{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--blue-pale), #E4EAFC);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--blue);transition:transform .25s ease;}
+  .service-card:hover .service-icon{transform:scale(1.08) rotate(-4deg);}
+  .service-card h3{font-size:18.5px;margin-bottom:9px;font-weight:600;}
+  .service-card p{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+  @media(max-width:940px){.service-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.service-grid{grid-template-columns:1fr;}}
+
+  /* CONVENIOS */
+  .convenios{background:var(--blue-deep);color:#fff;border-radius:28px;margin:0 24px;padding:40px 32px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;}
+  .convenios h3{color:#fff;font-size:22px;margin-bottom:6px;}
+  .convenios p{color:#C4D0F5;font-size:14.5px;max-width:400px;}
+  .conv-badges{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+  .conv-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:11px 18px;border-radius:100px;font-weight:700;font-size:13.5px;}
+  .conv-chip.img{padding:8px;background:#fff;}
+  .conv-chip.img img{height:40px;width:40px;object-fit:contain;border-radius:8px;}
+
+  /* GALLERY — natural ratios, nothing forced/cropped oddly */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .g-item{border-radius:16px;overflow:hidden;position:relative;background:#e9ecf6;}
+  .g-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+  .g-item:hover img{transform:scale(1.05);}
+  .g-tall{aspect-ratio:3/4;}
+  .g-wide{aspect-ratio:4/3;grid-column:span 2;}
+  @media(max-width:760px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .g-wide{grid-column:span 2;}
+  }
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center;}
+  .about-photo{border-radius:24px;overflow:hidden;background:var(--coral-pale);box-shadow:0 24px 50px -20px rgba(20,25,43,.25);aspect-ratio:578/553;max-width:380px;}
+  .about-photo img{width:100%;height:100%;object-fit:contain;}
+  .about-list{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:13px;}
+  .about-list li{display:flex;gap:12px;font-size:15px;color:var(--ink-soft);align-items:flex-start;}
+  .check{flex:none;width:22px;height:22px;border-radius:50%;background:var(--coral-pale);color:var(--coral);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-top:1px;}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr;}.about-photo{margin:0 auto;}}
+
+  /* QUOTE STRIP */
+  .quote-strip{background:var(--coral-pale);border-radius:28px;margin:0 24px;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;overflow:hidden;}
+  .quote-strip img{width:100%;height:100%;object-fit:cover;min-height:300px;}
+  .quote-text{padding:40px;}
+  .quote-text .eyebrow{color:var(--coral);}
+  .quote-text .eyebrow::before{background:var(--blue);}
+  .quote-text h3{font-size:26px;margin:12px 0 14px;}
+  .quote-text p{color:var(--ink-soft);font-size:15px;line-height:1.6;}
+  @media(max-width:780px){.quote-strip{grid-template-columns:1fr;}.quote-strip img{min-height:220px;}}
+
+  /* CONTATO */
+  .contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;}
+  .contato-card{background:var(--mist);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;justify-content:space-between;}
+  .info-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);}
+  .info-row:last-of-type{border-bottom:none;}
+  .info-icon{flex:none;width:36px;height:36px;border-radius:10px;background:var(--blue-pale);color:var(--blue);display:flex;align-items:center;justify-content:center;}
+  .info-row h4{font-size:14px;font-weight:700;margin-bottom:3px;}
+  .info-row p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+  .info-row a{color:var(--blue);font-weight:600;}
+  .contato-map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:320px;}
+  .contato-map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;}
+  @media(max-width:860px){.contato-grid{grid-template-columns:1fr;}}
+
+  .contato-form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;}
+  .contato-form h4{font-size:15px;font-weight:700;margin:0 0 18px;}
+  .form-row{margin-bottom:14px;display:flex;flex-direction:column;gap:6px;}
+  .form-row label{font-size:12.5px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;}
+  .form-row input, .form-row textarea{
+    border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-family:'Inter',sans-serif;
+    font-size:16px;color:var(--ink);background:var(--mist);transition:border-color .15s ease, background .15s ease;resize:vertical;
+  }
+  .form-row input:focus, .form-row textarea:focus{outline:none;border-color:var(--blue);background:#fff;}
+  .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .form-note{font-size:12px;color:var(--ink-soft);margin:2px 0 16px;line-height:1.5;}
+  @media(max-width:420px){.form-row-2{grid-template-columns:1fr;}}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--line);padding:20px 0;}
+  .faq-item h4{font-size:16px;font-weight:700;}
+  .faq-item p{color:var(--ink-soft);font-size:14px;margin-top:8px;line-height:1.6;}
+
+  /* FINAL CTA (persistent, shown on every page) */
+  .final-cta{background:linear-gradient(135deg,var(--blue) 0%, var(--blue-deep) 100%);border-radius:28px;margin:48px 24px 0;padding:52px 32px;text-align:center;color:#fff;position:relative;overflow:hidden;}
+  .final-cta::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle, rgba(244,121,107,.35), transparent 70%);top:-110px;right:-90px;}
+  .final-cta h2{color:#fff;font-size:clamp(24px,3.4vw,34px);position:relative;}
+  .final-cta p{color:#CBD7F8;margin:12px 0 26px;font-size:15px;position:relative;}
+  .final-cta .hero-ctas{justify-content:center;position:relative;}
+  .final-cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;}
+
+  /* FOOTER */
+  footer{padding:48px 0 28px;margin-top:48px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:28px;border-bottom:1px solid var(--line);}
+  .foot-brand img{height:36px;margin-bottom:12px;}
+  .foot-brand p{color:var(--ink-soft);font-size:13.5px;max-width:280px;line-height:1.6;}
+  footer h5{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:12px;}
+  footer ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;font-size:14px;}
+  footer ul button{background:none;border:none;font:inherit;color:inherit;cursor:pointer;padding:0;text-align:left;}
+  footer ul a:hover, footer ul button:hover{color:var(--blue);}
+  .foot-bottom{display:flex;justify-content:space-between;padding-top:20px;font-size:12.5px;color:var(--ink-soft);flex-wrap:wrap;gap:10px;}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr;}}
+
+  /* WHATSAPP FLOAT */
+  .wa-float{position:fixed;bottom:20px;right:20px;z-index:70;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);margin-bottom:env(safe-area-inset-bottom);animation:wa-pulse 2.4s infinite;}
+  .wa-float svg{width:26px;height:26px;}
+  @keyframes wa-pulse{
+    0%{box-shadow:0 14px 30px -8px rgba(37,211,102,.6), 0 0 0 0 rgba(37,211,102,.55);}
+    70%{box-shadow:0 14px 30px -8px rgba(37,211,102,.6), 0 0 0 18px rgba(37,211,102,0);}
+    100%{box-shadow:0 14px 30px -8px rgba(37,211,102,.6), 0 0 0 0 rgba(37,211,102,0);}
+  }
+
+  @media(max-width:640px){
+    section{padding:48px 0;}
+    .page-intro{padding:40px 0 28px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#" onclick="goPage('inicio');return false;"><img src="assets/logo.jpg" alt="Logo Health Fisioterapia e Bem Estar"><span class="brand-name">Health<span>Fisioterapia e Bem Estar</span></span></a>
+    <nav class="navlinks" id="desktopNav">
+      <button data-page="inicio" class="active" onclick="goPage('inicio')">Início</button>
+      <button data-page="servicos" onclick="goPage('servicos')">Serviços</button>
+      <button data-page="sobre" onclick="goPage('sobre')">Sobre</button>
+      <button data-page="contato" onclick="goPage('contato')">Localização</button>
+      <button data-page="duvidas" onclick="goPage('duvidas')">Dúvidas</button>
+    </nav>
+    <div class="navcta">
+      <a class="btn btn-ghost" href="https://www.instagram.com/health_fisio/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn-primary" href="https://wa.me/5513996083907" target="_blank" rel="noopener">Agendar</a>
+      <button class="hamburger" onclick="toggleMenu(true)" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-top">
+    <img src="assets/logo.jpg" alt="Logo Health">
+    <button class="mm-close" onclick="toggleMenu(false)" aria-label="Fechar menu">✕</button>
+  </div>
+  <nav class="mm-links" id="mobileNav">
+    <button data-page="inicio" class="active" onclick="goPage('inicio')">Início</button>
+    <button data-page="servicos" onclick="goPage('servicos')">Serviços</button>
+    <button data-page="sobre" onclick="goPage('sobre')">Sobre</button>
+    <button data-page="contato" onclick="goPage('contato')">Localização</button>
+    <button data-page="duvidas" onclick="goPage('duvidas')">Dúvidas</button>
+  </nav>
+  <div class="mm-ctas">
+    <a class="btn btn-primary btn-block" href="https://wa.me/5513996083907" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    <a class="btn btn-ghost btn-block" href="https://www.instagram.com/health_fisio/" target="_blank" rel="noopener">Seguir no Instagram</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- PÁGINA: INÍCIO -->
+  <div class="page active" id="page-inicio">
+    <section class="hero">
+      <div class="hero-blob"></div>
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Guarujá · Baixada Santista</span>
+          <h1>Cuidar da sua saúde é <em>a nossa maior prioridade.</em></h1>
+          <p class="lead">Fisioterapia, Pilates e Estética Avançada com atendimento humanizado, estrutura completa e profissionais especializados — no coração do Guarujá.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://wa.me/5513996083907" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+            <button class="btn btn-ghost" onclick="goPage('servicos')">Ver especialidades</button>
+          </div>
+          <div class="hero-badges">
+            <span class="pill">Totalpass</span>
+            <span class="pill">Wellhub (Gympass)</span>
+            <span class="pill">Parceiro AAMPESP</span>
+          </div>
+          <div class="trust-bar">
+            <div class="trust-stat"><b>4</b><span>Especialidades</span></div>
+            <div class="trust-stat"><b>8+</b><span>Cidades atendidas</span></div>
+            <div class="trust-stat"><b>100%</b><span>Atendimento humanizado</span></div>
+          </div>
+        </div>
+        <div class="hero-photo-frame">
+          <img src="assets/hero-owner.jpg" alt="Fisioterapeuta responsável pela clínica Health, em Guarujá">
+          <div class="hero-tag">
+            <span class="dot"></span>
+            <span>Atendimento individualizado, do primeiro contato ao resultado.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Nossas especialidades</span>
+          <h2>Cuidado completo, em um só endereço.</h2>
+        </div>
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 100 6 3 3 0 000-6zM5 22l3-9 4 3 4-3 3 9"/></svg></div>
+            <h3>Fisioterapia</h3>
+            <p>Reabilitação ortopédica, esportiva e neurofuncional.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg></div>
+            <h3>Pilates</h3>
+            <p>Reformer, Cadillac, Chair e Barrel, em turmas reduzidas.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg></div>
+            <h3>Estética Avançada</h3>
+            <p>Protocolos faciais e corporais com tecnologia atual.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg></div>
+            <h3>Depilação a Laser</h3>
+            <p>Sessões seguras e eficazes para todo o corpo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="convenios">
+      <div>
+        <h3>Convênios e parcerias</h3>
+        <p>Facilidade e economia para você cuidar da sua saúde sem burocracia.</p>
+      </div>
+      <div class="conv-badges">
+        <span class="conv-chip">Totalpass</span>
+        <span class="conv-chip">Wellhub · Gympass</span>
+        <span class="conv-chip">Parceiro AAMPESP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PÁGINA: SERVIÇOS -->
+  <div class="page" id="page-servicos">
+    <div class="page-intro">
+      <div class="wrap">
+        <span class="eyebrow">Serviços</span>
+        <h1>Tratamentos pensados para cada fase da sua rotina.</h1>
+        <p>Profissionais qualificados, estrutura moderna e acompanhamento próximo em cada especialidade.</p>
+      </div>
+    </div>
+    <section>
+      <div class="wrap">
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 100 6 3 3 0 000-6zM5 22l3-9 4 3 4-3 3 9"/></svg></div>
+            <h3>Fisioterapia</h3>
+            <p>Reabilitação ortopédica, esportiva e neurofuncional, com avaliação individualizada em cada sessão.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg></div>
+            <h3>Pilates</h3>
+            <p>Aulas em Reformer, Cadillac, Chair e Barrel, com turmas reduzidas e acompanhamento próximo.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg></div>
+            <h3>Estética Avançada</h3>
+            <p>Protocolos faciais e corporais com tecnologia atual e resultados visíveis e duradouros.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg></div>
+            <h3>Depilação a Laser</h3>
+            <p>Sessões seguras e eficazes, com equipamento de ponta para todo o corpo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote-strip">
+      <div class="img-placeholder" style="height:100%;min-height:300px;"><span>Pilates · Health</span></div>
+      <div class="quote-text">
+        <span class="eyebrow">Por que Pilates</span>
+        <h3>Mais força e flexibilidade, menos dor e ansiedade.</h3>
+        <p>O Pilates clínico trabalha disposição, força e equilíbrio — enquanto reduz dores, estresse e tensão do dia a dia.</p>
+        <a class="btn btn-coral" style="margin-top:20px;" href="https://wa.me/5513996083907" target="_blank" rel="noopener">Faça uma aula experimental</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PÁGINA: SOBRE -->
+  <div class="page" id="page-sobre">
+    <div class="page-intro">
+      <div class="wrap">
+        <span class="eyebrow">Sobre a Health</span>
+        <h1>Sua saúde e bem-estar são a nossa prioridade.</h1>
+        <p>Conheça quem cuida de você e a estrutura pensada para o seu movimento.</p>
+      </div>
+    </div>
+    <section>
+      <div class="wrap about-grid">
+        <div class="about-photo">
+          <img src="assets/dra-coat.jpg" alt="Responsável técnica da clínica Health, em Guarujá">
+        </div>
+        <div>
+          <p style="color:var(--ink-soft);font-size:16px;line-height:1.65;">Somos uma clínica em Guarujá dedicada a oferecer fisioterapia, pilates e estética com atendimento humanizado, tecnologia de qualidade e um ambiente acolhedor para toda a família.</p>
+          <ul class="about-list">
+            <li><span class="check">✓</span>Profissionais especializados e atendimento individualizado</li>
+            <li><span class="check">✓</span>Estúdio completo de Pilates com equipamentos clínicos</li>
+            <li><span class="check">✓</span>Protocolos estéticos com tecnologia atual</li>
+            <li><span class="check">✓</span>Horários flexíveis, também aos sábados</li>
+          </ul>
+          <a class="btn btn-primary" style="margin-top:26px;" href="https://wa.me/5513996083907" target="_blank" rel="noopener">Agendar avaliação</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Nossa estrutura</span>
+          <h2>Um estúdio pensado para o seu movimento.</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="g-item g-wide"><div class="img-placeholder"><span>Sequência de exercícios no Reformer</span></div></div>
+          <div class="g-item g-tall"><div class="img-placeholder"><span>Exercício de Pilates vertical</span></div></div>
+          <div class="g-item g-tall"><div class="img-placeholder"><span>Pilates com ring</span></div></div>
+          <div class="g-item g-wide"><div class="img-placeholder"><span>Fortalecimento no Reformer</span></div></div>
+          <div class="g-item g-tall"><div class="img-placeholder"><span>Pilates em dupla</span></div></div>
+          <div class="g-item g-tall"><div class="img-placeholder"><span>Equilíbrio com bola suíça</span></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PÁGINA: LOCALIZAÇÃO / CONTATO -->
+  <div class="page" id="page-contato">
+    <div class="page-intro">
+      <div class="wrap">
+        <span class="eyebrow">Localização e contato</span>
+        <h1>Venha nos conhecer em Guarujá.</h1>
+        <p>Atendemos toda a Baixada Santista, com estrutura completa no coração do Guarujá.</p>
+      </div>
+    </div>
+    <section>
+      <div class="wrap">
+        <div class="contato-grid">
+          <div style="display:grid;gap:18px;">
+          <div class="contato-card">
+            <div>
+              <div class="info-row">
+                <div class="info-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+                <div>
+                  <h4>Endereço</h4>
+                  <p>Rua Prof Waldery de Almeida, 594 - altos<br>Guarujá - SP, 11451-070</p>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg></div>
+                <div>
+                  <h4>WhatsApp</h4>
+                  <p><a href="https://wa.me/5513996083907" target="_blank" rel="noopener">(13) 99608-3907</a></p>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></div>
+                <div>
+                  <h4>Horário de funcionamento</h4>
+                  <p>Segunda a sexta: 07h às 21h<br>Sábado: 08h às 13h · Domingo: fechado</p>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="15" rx="3"/><path d="M2 8l10 6 10-6"/></svg></div>
+                <div>
+                  <h4>Instagram</h4>
+                  <p><a href="https://www.instagram.com/health_fisio/" target="_blank" rel="noopener">@health_fisio</a></p>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-block" style="margin-top:22px;" href="https://wa.me/5513996083907" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          </div>
+
+          <form class="contato-form" onsubmit="return sendToWhats(event)">
+            <h4>Prefere mensagem escrita? Preencha aqui:</h4>
+            <div class="form-row-2">
+              <div class="form-row">
+                <label>Nome completo</label>
+                <input type="text" id="f-nome" placeholder="Seu nome" required>
+              </div>
+              <div class="form-row">
+                <label>Telefone</label>
+                <input type="tel" id="f-telefone" inputmode="tel" placeholder="(13) 90000-0000" required>
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="form-row">
+                <label>Cidade</label>
+                <input type="text" id="f-cidade" placeholder="Ex: Guarujá" required>
+              </div>
+              <div class="form-row">
+                <label>RG</label>
+                <input type="text" id="f-rg" inputmode="numeric" placeholder="00.000.000-0">
+              </div>
+            </div>
+            <div class="form-row">
+              <label>Dúvidas / perguntas</label>
+              <textarea id="f-mensagem" rows="3" placeholder="Conte o que você gostaria de saber ou agendar"></textarea>
+            </div>
+            <p class="form-note">Seus dados são usados apenas para agilizar o atendimento e não são compartilhados com terceiros.</p>
+            <button type="submit" class="btn btn-coral btn-block">Enviar pelo WhatsApp</button>
+          </form>
+          </div>
+
+          <div class="contato-map">
+            <iframe src="https://maps.google.com/maps?q=Rua%20Prof%20Waldery%20de%20Almeida%2C%20594%2C%20Guaruj%C3%A1%2C%20SP%2C%2011451-070&z=16&output=embed" allowfullscreen="" loading="lazy" title="Mapa de localização da clínica Health em Guarujá"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PÁGINA: DÚVIDAS -->
+  <div class="page" id="page-duvidas">
+    <div class="page-intro">
+      <div class="wrap">
+        <span class="eyebrow">Dúvidas frequentes</span>
+        <h1>Perguntas que recebemos com frequência</h1>
+      </div>
+    </div>
+    <section>
+      <div class="wrap" style="max-width:780px;">
+        <div class="faq-item">
+          <h4>A clínica atende quais cidades da Baixada Santista?</h4>
+          <p>Estamos em Guarujá e recebemos pacientes de toda a Baixada Santista: Santos, São Vicente, Cubatão, Praia Grande, Bertioga, Mongaguá, Itanhaém e Peruíbe.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Vocês aceitam Totalpass e Wellhub (Gympass)?</h4>
+          <p>Sim! Somos parceiros Totalpass e Wellhub. Basta apresentar o check-in do app na recepção.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Preciso de encaminhamento médico para iniciar fisioterapia?</h4>
+          <p>Não é obrigatório. Fazemos uma avaliação inicial completa e, quando necessário, dialogamos com o médico responsável.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Como funcionam as aulas de Pilates?</h4>
+          <p>Turmas reduzidas, com acompanhamento personalizado em equipamentos como Reformer, Cadillac, Chair e Barrel.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<div class="wrap">
+  <div class="final-cta">
+    <h2>Pronta pra cuidar de você?</h2>
+    <p>Agende sua avaliação pelo WhatsApp ou fale com a gente pelo Instagram.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-coral" href="https://wa.me/5513996083907" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/health_fisio/" target="_blank" rel="noopener">Siga no Instagram</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.jpg" alt="Logo Health Fisioterapia e Bem Estar">
+        <p>Cuidado profissional em fisioterapia, pilates e estética para toda a Baixada Santista.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <ul>
+          <li><button onclick="goPage('inicio')">Início</button></li>
+          <li><button onclick="goPage('servicos')">Serviços</button></li>
+          <li><button onclick="goPage('sobre')">Sobre</button></li>
+          <li><button onclick="goPage('contato')">Localização</button></li>
+          <li><button onclick="goPage('duvidas')">Dúvidas</button></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li>Rua Prof Waldery de Almeida, 594 - altos<br>Guarujá - SP, 11451-070</li>
+          <li><a href="https://wa.me/5513996083907" target="_blank" rel="noopener">(13) 99608-3907</a></li>
+          <li><a href="https://www.instagram.com/health_fisio/" target="_blank" rel="noopener">@health_fisio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Health Fisioterapia e Bem Estar. Todos os direitos reservados.</span>
+      <span>Guarujá · Baixada Santista · SP</span>
+    </div>
+    <div class="foot-bottom" style="border-top:1px solid var(--line);margin-top:14px;padding-top:14px;">
+      <span>Desenvolvido por Lucas Nassuato da Silva — Nassusinfo Soluções Tecnológicas</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5513996083907" target="_blank" rel="noopener" aria-label="Agendar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.28-1.38a9.9 9.9 0 004.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0012.04 2m0 1.67a8.2 8.2 0 018.23 8.24c0 4.55-3.7 8.24-8.24 8.24a8.2 8.2 0 01-4.19-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 01-1.26-4.37c0-4.55 3.7-8.24 8.25-8.24m-4.5 4.32c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36 1 2.52c.12.16 1.7 2.68 4.13 3.66 2.03.82 2.44.66 2.88.62.44-.04 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.32-.75-1.8-.2-.47-.4-.4-.55-.4h-.46"/></svg>
+</a>
+
+<script>
+  function goPage(name){
+    document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+    document.getElementById('page-' + name).classList.add('active');
+    document.querySelectorAll('#desktopNav button, #mobileNav button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.page === name);
+    });
+    toggleMenu(false);
+    document.querySelector('main').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  function toggleMenu(open){
+    document.getElementById('mobileMenu').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  function sendToWhats(e){
+    e.preventDefault();
+    var nome = document.getElementById('f-nome').value;
+    var tel = document.getElementById('f-telefone').value;
+    var cidade = document.getElementById('f-cidade').value;
+    var rg = document.getElementById('f-rg').value;
+    var msg = document.getElementById('f-mensagem').value;
+    var texto = 'Olá! Meu nome é ' + nome + '.';
+    texto += '\nTelefone: ' + tel;
+    texto += '\nCidade: ' + cidade;
+    if(rg){ texto += '\nRG: ' + rg; }
+    if(msg){ texto += '\nDúvidas: ' + msg; }
+    window.open('https://wa.me/5513996083907?text=' + encodeURIComponent(texto), '_blank');
+    return false;
+  }
+
+  /* Reveal on scroll */
+  document.querySelectorAll('section, .convenios, .quote-strip').forEach(function(el){ el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>
