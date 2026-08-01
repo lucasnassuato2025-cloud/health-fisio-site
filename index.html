@@ -1,61 +1,349 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Health Fisioterapia e Bem Estar | Guarujá</title>
-  <meta name="description" content="Fisioterapia, Pilates, Estética Avançada e Depilação a Laser no Guarujá. Atendimento humanizado para a Baixada Santista.">
-  <meta name="theme-color" content="#0b315f">
-  <link rel="canonical" href="https://fisiobemestar.vercel.app/">
-  <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Health Fisioterapia e Bem Estar | Guarujá">
-  <meta property="og:description" content="Cuidado especializado para viver com mais movimento e bem-estar.">
-  <meta property="og:url" content="https://fisiobemestar.vercel.app/">
-  <meta property="og:image" content="https://fisiobemestar.vercel.app/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site-final.css">
-  <script defer src="assets/site-final.js"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","name":"Health Fisioterapia e Bem Estar","url":"https://fisiobemestar.vercel.app/","image":"https://fisiobemestar.vercel.app/og-image.jpg","telephone":"+55 13 99608-3907","address":{"@type":"PostalAddress","streetAddress":"Rua Prof. Waldery de Almeida, 594 - altos","addressLocality":"Guarujá","addressRegion":"SP","postalCode":"11451-070","addressCountry":"BR"},"areaServed":["Guarujá","Baixada Santista"],"sameAs":["https://www.instagram.com/health_fisio/"]}</script>
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="site-header"><div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Health Fisioterapia e Bem Estar — início">
-      <img src="assets/health/logo-health.png" width="900" height="720" alt="" decoding="async">
-      <span><b>Health</b><small>Fisioterapia e Bem Estar</small></span>
-    </a>
-    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><i></i><i></i><i></i></button>
-    <nav id="main-nav" aria-label="Navegação principal"><a class="active" href="index.html">Início</a><a href="servicos.html">Serviços</a><a href="fotos.html">Fotos</a><a href="contato.html">Contato</a></nav>
-    <a class="button button-sm header-cta" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Health%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação <span>↗</span></a>
-  </div></header>
-  <main id="conteudo">
-    <section class="hero"><div class="container hero-grid">
-      <div class="hero-copy"><p class="eyebrow">Guarujá · Baixada Santista</p><h1>Cuidado especializado para viver com mais <em>movimento.</em></h1><p class="lead">Fisioterapia, Pilates e Estética Avançada em uma experiência próxima, segura e individualizada.</p><div class="hero-actions"><a class="button" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Falar com a Health <span>↗</span></a><a class="text-link" href="servicos.html">Conhecer os serviços →</a></div><div class="hero-meta"><span>Atendimento humanizado</span><span>Estrutura especializada</span><span>Contato direto</span></div></div>
-      <div class="hero-media"><div class="hero-photo"><img src="assets/health/profissional.png" width="578" height="553" alt="Profissional da clínica Health" fetchpriority="high" decoding="async"></div><div class="hero-logo"><img src="assets/health/logo-health.png" width="900" height="720" alt="Health Fisioterapia e Bem Estar" decoding="async"></div></div>
-    </div></section>
-    <section class="services-home" aria-labelledby="servicos-title"><div class="container">
-      <header class="section-heading"><div><p class="eyebrow">Especialidades</p><h2 id="servicos-title">Cuidado completo, com atenção a cada pessoa.</h2></div><a class="text-link desktop-link" href="servicos.html">Ver detalhes →</a></header>
-      <div class="service-grid">
-        <article><span>01</span><h3>Fisioterapia</h3><p>Prevenção, tratamento e recuperação de movimentos.</p></article>
-        <article><span>02</span><h3>Pilates</h3><p>Força, mobilidade, equilíbrio e consciência corporal.</p></article>
-        <article><span>03</span><h3>Estética Avançada</h3><p>Protocolos faciais e corporais individualizados.</p></article>
-        <article><span>04</span><h3>Depilação a Laser</h3><p>Tecnologia e acompanhamento profissional.</p></article>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Health Fisioterapia e Bem Estar | Guarujá</title>
+    <meta
+      name="description"
+      content="Fisioterapia, Pilates, Estética Avançada e Depilação a Laser no Guarujá. Atendimento humanizado para a Baixada Santista."
+    />
+    <meta name="theme-color" content="#0b315f" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Health Fisioterapia e Bem Estar" />
+    <link rel="canonical" href="https://fisiobemestar.vercel.app/" />
+    <link rel="icon" href="/favicon.webp" type="image/webp" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="Health Fisioterapia e Bem Estar | Guarujá"
+    />
+    <meta
+      property="og:description"
+      content="Cuidado especializado para viver com mais movimento e bem-estar."
+    />
+    <meta property="og:url" content="https://fisiobemestar.vercel.app/" />
+    <meta property="og:site_name" content="Health Fisioterapia e Bem Estar" />
+    <meta
+      property="og:image"
+      content="https://fisiobemestar.vercel.app/og-image.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Health Fisioterapia e Bem Estar | Guarujá"
+    />
+    <meta
+      name="twitter:description"
+      content="Fisioterapia, Pilates, Estética Avançada e Depilação a Laser no Guarujá."
+    />
+    <meta
+      name="twitter:image"
+      content="https://fisiobemestar.vercel.app/og-image.jpg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/site-final.css" />
+    <script defer src="assets/site-final.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "@id": "https://fisiobemestar.vercel.app/#clinica",
+        "name": "Health Fisioterapia e Bem Estar",
+        "url": "https://fisiobemestar.vercel.app/",
+        "image": "https://fisiobemestar.vercel.app/og-image.jpg",
+        "logo": "https://fisiobemestar.vercel.app/assets/health/logo-health.webp",
+        "telephone": "+55 13 99608-3907",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Prof. Waldery de Almeida, 594 - altos",
+          "addressLocality": "Guarujá",
+          "addressRegion": "SP",
+          "postalCode": "11451-070",
+          "addressCountry": "BR"
+        },
+        "areaServed": ["Guarujá", "Baixada Santista"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55 13 99608-3907",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        },
+        "sameAs": ["https://www.instagram.com/health_fisio/"]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="/"
+          aria-label="Health Fisioterapia e Bem Estar — início"
+        >
+          <img
+            src="assets/health/logo-health.webp"
+            width="900"
+            height="720"
+            alt=""
+            decoding="async"
+          />
+          <span><b>Health</b><small>Fisioterapia e Bem Estar</small></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <i></i><i></i><i></i>
+        </button>
+        <nav id="main-nav" aria-label="Navegação principal">
+          <a class="active" href="/" aria-current="page">Início</a
+          ><a href="/sobre">Sobre</a><a href="/servicos">Serviços</a
+          ><a href="/fotos">Fotos</a><a href="/contato">Contato</a>
+        </nav>
+        <a
+          class="button button-sm header-cta"
+          href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Health%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+          target="_blank"
+          rel="noopener"
+          data-whatsapp="cabecalho"
+          >Agendar avaliação <span>↗</span></a
+        >
       </div>
-    </div></section>
-    <section class="partners" aria-labelledby="partners-title"><div class="container partners-grid">
-      <div class="partners-copy"><p class="eyebrow light">Parcerias e facilidades</p><h2 id="partners-title">Mais possibilidades para cuidar de você.</h2><p>A Health atende por meio de parcerias e benefícios. Consulte com a equipe os planos, serviços elegíveis e a disponibilidade.</p><div class="service-pills"><span>Fisioterapia</span><span>Pilates</span><span>Estética Avançada</span><span>Depilação a Laser</span></div></div>
-      <div class="partner-list"><article class="partner-aampesp"><img src="assets/health/aampesp.png" width="504" height="563" alt="AAMPESP — nova parceria" loading="lazy" decoding="async"><div><b>AAMPESP</b><span>Clínica parceira</span></div></article><article><b>TotalPass</b><span>Consulte seu plano</span></article><article><b>Wellhub</b><span>Consulte seu plano</span></article></div>
-    </div></section>
-    <section class="pilates-feature"><div class="container feature-grid">
-      <div class="feature-copy"><p class="eyebrow">Conheça a clínica</p><h2>Estrutura e movimento em uma rotina de cuidado.</h2><p>Veja mais registros dos atendimentos e do espaço da Health.</p><a class="text-link" href="fotos.html">Abrir galeria de fotos →</a></div>
-      <div class="feature-photos"><figure><img src="assets/health/pilates-hd-1.jpg" width="1200" height="800" alt="Sessão de Pilates no Reformer com acompanhamento profissional" loading="lazy" decoding="async"></figure><figure><img src="assets/health/pilates-hd-2.jpg" width="1200" height="800" alt="Sessão de Pilates no Cadillac com acompanhamento profissional" loading="lazy" decoding="async"></figure></div>
-    </div></section>
-    <section class="home-cta"><div class="container cta-inner"><div><p class="eyebrow light">Seu próximo passo</p><h2>Converse diretamente com a equipe Health.</h2></div><a class="button button-light" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Health." target="_blank" rel="noopener">WhatsApp (13) 99608-3907 <span>↗</span></a></div></section>
-  </main>
-  <footer class="site-footer"><div class="container footer-grid"><a class="brand brand-footer" href="index.html"><img src="assets/health/logo-health.png" width="900" height="720" alt="" loading="lazy" decoding="async"><span><b>Health</b><small>Fisioterapia e Bem Estar</small></span></a><p>Atendimento em fisioterapia, Pilates e estética no Guarujá.</p><nav aria-label="Links do rodapé"><a href="servicos.html">Serviços</a><a href="fotos.html">Fotos</a><a href="contato.html">Contato</a><button type="button" data-privacy>Privacidade</button></nav></div><div class="container footer-bottom"><span>© <span data-year></span> Health Fisioterapia e Bem Estar.</span><a href="https://www.nassusinfo.com.br" target="_blank" rel="noopener">Desenvolvimento: Lucas Nassuato da Silva — www.nassusinfo.com.br</a></div></footer>
-  <a class="whatsapp-float" href="https://wa.me/5513996083907" target="_blank" rel="noopener" aria-label="Falar com a Health pelo WhatsApp">✆</a>
-  <div class="cookie-banner" role="dialog" aria-label="Aviso de privacidade"><p>Este site usa armazenamento local somente para lembrar sua preferência. Ao abrir o WhatsApp, aplicam-se as políticas do aplicativo.</p><button class="button button-sm" type="button" data-cookie>Entendi</button><button class="plain-button" type="button" data-privacy>Saiba mais</button></div>
-  <dialog id="privacy-dialog"><button class="dialog-close" type="button" aria-label="Fechar">×</button><h2>Privacidade e LGPD</h2><p>Este site não possui cadastro, painel ou banco de dados próprio. Os dados enviados pelo WhatsApp são tratados diretamente no aplicativo.</p><p>Antes da publicação, a clínica deve confirmar o canal oficial para solicitações relacionadas à LGPD.</p></dialog>
-</body></html>
+    </header>
+    <main id="conteudo">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Guarujá · Baixada Santista</p>
+            <h1>
+              Cuidado especializado para viver com mais <em>movimento.</em>
+            </h1>
+            <p class="lead">
+              Fisioterapia, Pilates e Estética Avançada em uma experiência
+              próxima, segura e individualizada.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button"
+                href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                target="_blank"
+                rel="noopener"
+                data-whatsapp="hero"
+                >Falar com a Health <span>↗</span></a
+              ><a class="text-link" href="/servicos">Conhecer os serviços →</a>
+            </div>
+            <div class="hero-meta">
+              <span>Atendimento humanizado</span
+              ><span>Estrutura especializada</span><span>Contato direto</span>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-photo">
+              <img
+                src="assets/health/profissional.webp"
+                width="578"
+                height="553"
+                alt="Profissional da clínica Health"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+            <div class="hero-logo">
+              <img
+                src="assets/health/logo-health.webp"
+                width="900"
+                height="720"
+                alt="Health Fisioterapia e Bem Estar"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services-home" aria-labelledby="servicos-title">
+        <div class="container">
+          <header class="section-heading">
+            <div>
+              <p class="eyebrow">Especialidades</p>
+              <h2 id="servicos-title">
+                Cuidado completo, com atenção a cada pessoa.
+              </h2>
+            </div>
+            <a class="text-link desktop-link" href="/servicos"
+              >Ver detalhes →</a
+            >
+          </header>
+          <div class="service-grid">
+            <article>
+              <span>01</span>
+              <h3>Fisioterapia</h3>
+              <p>Prevenção, tratamento e recuperação de movimentos.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Pilates</h3>
+              <p>Força, mobilidade, equilíbrio e consciência corporal.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Estética Avançada</h3>
+              <p>Protocolos faciais e corporais individualizados.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Depilação a Laser</h3>
+              <p>Tecnologia e acompanhamento profissional.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="partners" aria-labelledby="partners-title">
+        <div class="container partners-grid">
+          <div class="partners-copy">
+            <p class="eyebrow light">Parcerias e facilidades</p>
+            <h2 id="partners-title">
+              Mais possibilidades para cuidar de você.
+            </h2>
+            <p>
+              A Health atende por meio de parcerias e benefícios. Consulte com a
+              equipe os planos, serviços elegíveis e a disponibilidade.
+            </p>
+            <div class="service-pills">
+              <span>Fisioterapia</span><span>Pilates</span
+              ><span>Estética Avançada</span><span>Depilação a Laser</span>
+            </div>
+          </div>
+          <div class="partner-list">
+            <article class="partner-aampesp">
+              <img
+                src="assets/health/aampesp.webp"
+                width="504"
+                height="563"
+                alt="AAMPESP — nova parceria"
+                loading="lazy"
+                decoding="async"
+              />
+              <div><b>AAMPESP</b><span>Clínica parceira</span></div>
+            </article>
+            <article><b>TotalPass</b><span>Consulte seu plano</span></article>
+            <article><b>Wellhub</b><span>Consulte seu plano</span></article>
+          </div>
+        </div>
+      </section>
+      <section class="pilates-feature">
+        <div class="container feature-grid">
+          <div class="feature-copy">
+            <p class="eyebrow">Conheça a clínica</p>
+            <h2>Estrutura e movimento em uma rotina de cuidado.</h2>
+            <p>Veja mais registros dos atendimentos e do espaço da Health.</p>
+            <a class="text-link" href="/fotos">Abrir galeria de fotos →</a>
+          </div>
+          <div class="feature-photos">
+            <figure>
+              <img
+                src="assets/health/pilates-hd-1.webp"
+                width="1200"
+                height="800"
+                alt="Sessão de Pilates no Reformer com acompanhamento profissional"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure>
+              <img
+                src="assets/health/pilates-hd-2.webp"
+                width="1200"
+                height="800"
+                alt="Sessão de Pilates no Cadillac com acompanhamento profissional"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="home-cta">
+        <div class="container cta-inner">
+          <div>
+            <p class="eyebrow light">Seu próximo passo</p>
+            <h2>Converse diretamente com a equipe Health.</h2>
+          </div>
+          <a
+            class="button button-light"
+            href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Health."
+            target="_blank"
+            rel="noopener"
+            data-whatsapp="cta-final"
+            >WhatsApp (13) 99608-3907 <span>↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand brand-footer" href="/"
+          ><img
+            src="assets/health/logo-health.webp"
+            width="900"
+            height="720"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span><b>Health</b><small>Fisioterapia e Bem Estar</small></span></a
+        >
+        <p>Atendimento em fisioterapia, Pilates e estética no Guarujá.</p>
+        <nav aria-label="Links do rodapé">
+          <a href="/sobre">Sobre</a><a href="/servicos">Serviços</a
+          ><a href="/fotos">Fotos</a><a href="/contato">Contato</a
+          ><button type="button" data-privacy>Privacidade</button>
+        </nav>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Health Fisioterapia e Bem Estar.</span
+        ><a href="https://www.nassusinfo.com.br" target="_blank" rel="noopener"
+          >Desenvolvimento: Lucas Nassuato da Silva — www.nassusinfo.com.br</a
+        >
+      </div>
+    </footer>
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5513996083907"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar com a Health pelo WhatsApp"
+      data-whatsapp="flutuante"
+      ><svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          d="M16 3a12.6 12.6 0 0 0-10.8 19L3.5 28.5l6.7-1.7A12.6 12.6 0 1 0 16 3Zm0 22.9c-2 0-3.9-.6-5.5-1.6l-.4-.2-4 .9 1-3.9-.3-.4A10.2 10.2 0 1 1 16 25.9Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.9-.9-3.2-1.7-4.5-3.9-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.3 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.3 1 3.2 1.1 4.3.9.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.2-.2-.4-.3-.7-.4Z"
+        /></svg
+    ></a>
+    <dialog id="privacy-dialog">
+      <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+      <h2>Privacidade e LGPD</h2>
+      <p>
+        Este site não solicita cadastro e não possui banco de dados próprio. Ao
+        escolher falar pelo WhatsApp ou Instagram, o visitante passa a usar os
+        serviços e as políticas de privacidade dessas plataformas.
+      </p>
+      <p>
+        Para dúvidas sobre privacidade, entre em contato com a Health pelo
+        WhatsApp informado neste site.
+      </p>
+    </dialog>
+  </body>
+</html>
