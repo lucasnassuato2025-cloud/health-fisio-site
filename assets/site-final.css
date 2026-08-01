@@ -1989,6 +1989,9 @@ dialog {
 /* Hero humano: responsável da clínica com assinatura visual da Health */
 .hero-media {
   isolation: isolate;
+  width: 100%;
+  max-width: 470px;
+  margin-left: auto;
   min-height: 385px;
 }
 .hero-media::before {
