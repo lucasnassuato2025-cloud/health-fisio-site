@@ -1,0 +1,474 @@
+/* Conteúdo institucional e formulário — carregado após o layout principal. */
+
+.service-grid.service-grid-five {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.service-grid.service-grid-five article {
+  grid-column: span 2;
+}
+
+.service-grid.service-grid-five article:nth-child(4),
+.service-grid.service-grid-five article:nth-child(5) {
+  grid-column: span 3;
+}
+
+.service-grid .service-homecare {
+  background: linear-gradient(145deg, #0b315f 0%, #125c70 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.service-grid .service-homecare h3,
+.service-grid .service-homecare p,
+.service-grid .service-homecare > span {
+  color: #fff;
+}
+
+.service-grid .service-homecare > span {
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.professional-home,
+.professional-section {
+  padding: 82px 0;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(36, 163, 155, 0.12), transparent 31%),
+    linear-gradient(145deg, #f8fbfc 0%, #eef7f6 100%);
+}
+
+.professional-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(38px, 7vw, 88px);
+  align-items: center;
+}
+
+.professional-photo {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 49, 95, 0.1);
+  border-radius: 32px;
+  background: #dfeeed;
+  box-shadow: 0 28px 70px rgba(8, 42, 82, 0.15);
+}
+
+.professional-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  background: linear-gradient(transparent, rgba(5, 31, 63, 0.2));
+  pointer-events: none;
+}
+
+.professional-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.professional-copy h2 {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.professional-name {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-weight: 800;
+}
+
+.professional-role {
+  margin: 0 0 22px;
+  color: var(--therapy-dark);
+  font-weight: 700;
+}
+
+.credential-list {
+  display: grid;
+  gap: 11px;
+  margin: 25px 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.credential-list li {
+  position: relative;
+  padding-left: 28px;
+  color: #44566d;
+  line-height: 1.55;
+}
+
+.credential-list li::before {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--therapy);
+  font-weight: 800;
+}
+
+.professional-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.professional-actions .button {
+  min-width: 210px;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: clamp(36px, 7vw, 84px);
+  align-items: center;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.about-values article {
+  padding: 22px;
+  border: 1px solid rgba(11, 49, 95, 0.1);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.about-values b {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+}
+
+.homecare-highlight {
+  padding: 78px 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #071d41 0%, #0b315f 58%, #116b72 125%);
+  color: #fff;
+}
+
+.homecare-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 52px;
+  align-items: center;
+}
+
+.homecare-highlight h2,
+.homecare-highlight p {
+  color: #fff;
+}
+
+.homecare-card {
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
+}
+
+.homecare-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.homecare-card li {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.service-details .detail-list article:last-child {
+  border-bottom: 0;
+}
+
+.schedule-section,
+.contact-form-section {
+  padding: 76px 0;
+}
+
+.schedule-section {
+  background: #f5f9fb;
+}
+
+.schedule-grid,
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1.22fr);
+  gap: clamp(36px, 7vw, 80px);
+  align-items: start;
+}
+
+.schedule-card {
+  overflow: hidden;
+  border: 1px solid rgba(11, 49, 95, 0.11);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 20px 48px rgba(8, 42, 82, 0.08);
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.72fr) minmax(0, 1.28fr);
+  gap: 18px;
+  align-items: center;
+  padding: 17px 22px;
+  border-bottom: 1px solid rgba(11, 49, 95, 0.08);
+}
+
+.schedule-row:last-child {
+  border-bottom: 0;
+}
+
+.schedule-row dt {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.schedule-row dd {
+  margin: 0;
+  color: #5c6b7d;
+}
+
+.schedule-row .open-by-appointment {
+  color: var(--therapy-dark);
+  font-weight: 700;
+}
+
+.contact-form-section {
+  background: #fff;
+}
+
+.contact-form-intro {
+  position: sticky;
+  top: 110px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(11, 49, 95, 0.11);
+  border-radius: 26px;
+  background: #f8fbfc;
+  box-shadow: 0 24px 60px rgba(8, 42, 82, 0.09);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field label,
+.form-consent label {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 15px;
+  border: 1px solid rgba(11, 49, 95, 0.18);
+  border-radius: 13px;
+  background: #fff;
+  color: #1d2d43;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field textarea {
+  min-height: 138px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 0;
+  border-color: var(--therapy);
+  box-shadow: 0 0 0 4px rgba(36, 163, 155, 0.13);
+}
+
+.form-consent {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.form-consent input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--therapy);
+}
+
+.form-consent label {
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.form-note {
+  margin: -4px 0 0;
+  color: #687789;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.form-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.form-success {
+  display: none;
+  margin-bottom: 22px;
+  padding: 18px 20px;
+  border: 1px solid rgba(36, 163, 155, 0.3);
+  border-radius: 15px;
+  background: #e9f8f5;
+  color: #0c5d57;
+  font-weight: 700;
+}
+
+.form-success.is-visible {
+  display: block;
+}
+
+.contact-email {
+  overflow-wrap: anywhere;
+}
+
+.contact-list article a.contact-email {
+  color: var(--therapy-dark);
+}
+
+@media (max-width: 980px) {
+  .professional-grid,
+  .about-intro-grid,
+  .homecare-grid,
+  .schedule-grid,
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .professional-photo {
+    width: min(520px, 100%);
+    min-height: 0;
+    margin-inline: auto;
+  }
+
+  .professional-photo img {
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+  }
+
+  .contact-form-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-grid.service-grid-five {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .service-grid.service-grid-five article,
+  .service-grid.service-grid-five article:nth-child(4),
+  .service-grid.service-grid-five article:nth-child(5) {
+    grid-column: auto !important;
+  }
+
+  .professional-home,
+  .professional-section,
+  .homecare-highlight,
+  .schedule-section,
+  .contact-form-section {
+    padding: 50px 0 !important;
+  }
+
+  .professional-grid,
+  .about-intro-grid,
+  .homecare-grid,
+  .schedule-grid,
+  .contact-form-grid {
+    gap: 28px !important;
+  }
+
+  .professional-photo {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .professional-photo img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 3 / 4;
+    object-fit: cover !important;
+  }
+
+  .professional-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .professional-actions .button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .homecare-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .schedule-card {
+    border-radius: 18px;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 15px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 20px;
+    border-radius: 18px;
+  }
+}
