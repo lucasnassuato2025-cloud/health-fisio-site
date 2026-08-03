@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <title>Contato e Localização | Health Fisioterapia e Bem Estar</title>
-    <meta name="description" content="Endereço, mapa, WhatsApp e Instagram da Health Fisioterapia e Bem Estar no Guarujá." />
+    <title>Contato, Horários e Localização | Health Guarujá</title>
+    <meta name="description" content="Fale com a Health Fisioterapia e Bem Estar, consulte horários, endereço, WhatsApp, e-mail e envie uma mensagem pelo formulário." />
     <meta name="theme-color" content="#0b315f" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://fisiobemestar.vercel.app/contato" />
@@ -13,8 +13,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Health Fisioterapia e Bem Estar" />
-    <meta property="og:title" content="Contato | Health Fisioterapia e Bem Estar" />
-    <meta property="og:description" content="Fale com a Health e consulte nossa localização no Guarujá." />
+    <meta property="og:title" content="Contato e localização | Health Guarujá" />
+    <meta property="og:description" content="Envie uma mensagem, fale pelo WhatsApp ou consulte a localização da Health." />
     <meta property="og:image" content="https://fisiobemestar.vercel.app/og-image.jpg" />
     <meta property="og:url" content="https://fisiobemestar.vercel.app/contato" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -23,7 +23,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/site-final.css?v=20260801-premium-hero-v2" />
     <link rel="stylesheet" href="assets/site-mobile.css?v=20260803-mobile-v2" media="(max-width: 767px)" />
+    <link rel="stylesheet" href="assets/site-content.css?v=20260803-profissional-v1" />
     <script defer src="assets/site-final.js?v=20260803-mobile-v2"></script>
+    <script defer src="assets/site-content.js?v=20260803-form-v1"></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -35,9 +37,9 @@
         </a>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><i></i><i></i><i></i></button>
         <nav id="main-nav" aria-label="Navegação principal">
-          <a href="/">Início</a><a href="/sobre">Sobre</a><a href="/servicos">Serviços</a><a href="/fotos">Fotos</a><a class="active" href="/contato" aria-current="page">Contato</a>
+          <a href="/">Início</a><a href="/sobre">Sobre</a><a href="/servicos">Serviços</a><a href="/fotos">Fotos</a><a class="active" href="/contato" aria-current="page">Contato</a><a href="/aluno">Aluno/Paciente</a><a href="/empresa">Empresa/Estúdio</a>
         </nav>
-        <a class="button button-sm header-cta" href="https://wa.me/5513996083907" target="_blank" rel="noopener" data-whatsapp="cabecalho">Agendar avaliação <span>↗</span></a>
+        <a class="button button-sm header-cta" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-whatsapp="cabecalho">Agendar avaliação <span>↗</span></a>
       </div>
     </header>
 
@@ -47,7 +49,7 @@
           <div>
             <p class="eyebrow">Contato e localização</p>
             <h1>Estamos no <em>Guarujá.</em></h1>
-            <p>Fale diretamente com a equipe ou consulte a melhor rota até a clínica.</p>
+            <p>Fale diretamente com a equipe, envie uma mensagem ou consulte a melhor rota até a clínica.</p>
           </div>
           <div class="contact-logo">
             <img src="assets/health/logo-health.png" width="900" height="720" alt="Health Fisioterapia e Bem Estar" decoding="async" />
@@ -67,16 +69,115 @@
             <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=Rua+Prof+Waldery+de+Almeida+594+Guaruja+SP+11451-070" target="_blank" rel="noopener">Abrir rota no Google Maps <span>↗</span></a>
             <div class="contact-list">
               <article><small>WhatsApp</small><b>(13) 99608-3907</b><a href="https://wa.me/5513996083907" target="_blank" rel="noopener" data-whatsapp="contato">Iniciar conversa →</a></article>
+              <article><small>E-mail</small><b><a class="contact-email" href="mailto:healthfisioterapiaebemestar@gmail.com">healthfisioterapiaebemestar@gmail.com</a></b></article>
               <article><small>Instagram</small><b><a class="instagram-link" href="https://www.instagram.com/health_fisio/" target="_blank" rel="noopener"><i aria-hidden="true"></i>@health_fisio ↗</a></b></article>
-              <article><small>Atendimento</small><b>Mediante agendamento</b><span>Consulte os horários disponíveis pelo WhatsApp</span></article>
+              <article><small>Atendimento</small><b>Mediante agendamento</b><span>Consulte a disponibilidade pelo WhatsApp ou formulário</span></article>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="schedule-section" aria-labelledby="horarios-title">
+        <div class="container schedule-grid">
+          <div>
+            <p class="eyebrow">Horários de atendimento</p>
+            <h2 id="horarios-title">Atendimentos realizados com hora marcada.</h2>
+            <p>Os dias informados como disponíveis funcionam somente mediante agendamento prévio e confirmação da equipe.</p>
+            <p>O atendimento Home Care também depende de avaliação e disponibilidade da profissional.</p>
+          </div>
+          <dl class="schedule-card">
+            <div class="schedule-row"><dt>Segunda-feira</dt><dd>Fechada</dd></div>
+            <div class="schedule-row"><dt>Terça-feira</dt><dd class="open-by-appointment">Somente com horário marcado</dd></div>
+            <div class="schedule-row"><dt>Quarta-feira</dt><dd>Fechada</dd></div>
+            <div class="schedule-row"><dt>Quinta-feira</dt><dd>Fechada</dd></div>
+            <div class="schedule-row"><dt>Sexta-feira</dt><dd class="open-by-appointment">Somente com horário marcado</dd></div>
+            <div class="schedule-row"><dt>Sábado</dt><dd class="open-by-appointment">Somente com horário marcado</dd></div>
+            <div class="schedule-row"><dt>Domingo</dt><dd>Fechada</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="contact-form-section" id="formulario" aria-labelledby="form-title">
+        <div class="container contact-form-grid">
+          <div class="contact-form-intro">
+            <p class="eyebrow">Envie uma mensagem</p>
+            <h2 id="form-title">Conte brevemente como podemos ajudar.</h2>
+            <p>Preencha os dados ao lado. A mensagem será encaminhada para o e-mail oficial da Health.</p>
+            <p>Para assuntos urgentes ou agendamento mais rápido, utilize o WhatsApp.</p>
+          </div>
+          <div>
+            <div class="form-success" data-form-success hidden tabindex="-1" role="status">Mensagem enviada com sucesso! A equipe Health entrará em contato pelos dados informados.</div>
+            <form class="contact-form" action="https://formsubmit.co/healthfisioterapiaebemestar@gmail.com" method="POST" data-contact-form>
+              <input type="hidden" name="_subject" value="Novo contato pelo site da Health" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://fisiobemestar.vercel.app/contato?enviado=1#formulario" />
+              <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="nome">Nome completo</label>
+                  <input id="nome" name="Nome" type="text" autocomplete="name" required maxlength="100" />
+                </div>
+                <div class="form-field">
+                  <label for="telefone">Telefone ou WhatsApp</label>
+                  <input id="telefone" name="Telefone ou WhatsApp" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25" placeholder="(13) 99999-9999" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="email">E-mail</label>
+                  <input id="email" name="E-mail" type="email" autocomplete="email" required maxlength="120" />
+                </div>
+                <div class="form-field">
+                  <label for="servico">Serviço de interesse</label>
+                  <select id="servico" name="Serviço de interesse" required>
+                    <option value="">Selecione</option>
+                    <option value="Fisioterapia">Fisioterapia</option>
+                    <option value="Pilates">Pilates</option>
+                    <option value="Estética Avançada">Estética Avançada</option>
+                    <option value="Depilação a Laser">Depilação a Laser</option>
+                    <option value="Home Care">Atendimento Home Care</option>
+                    <option value="Outras informações">Outras informações</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="modalidade">Preferência de atendimento</label>
+                  <select id="modalidade" name="Preferência de atendimento" required>
+                    <option value="">Selecione</option>
+                    <option value="Na clínica">Na clínica</option>
+                    <option value="Home Care">Home Care</option>
+                    <option value="Gostaria de orientação">Gostaria de orientação</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="horario">Melhor dia ou período</label>
+                  <input id="horario" name="Melhor dia ou período" type="text" maxlength="80" placeholder="Ex.: terça-feira à tarde" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="Mensagem" required maxlength="1200" placeholder="Escreva sua dúvida ou solicitação de forma breve."></textarea>
+              </div>
+
+              <div class="form-consent">
+                <input id="consentimento" name="Consentimento" type="checkbox" value="Autorizado" required />
+                <label for="consentimento">Autorizo a Health a utilizar estes dados somente para responder ao meu contato, conforme a LGPD.</label>
+              </div>
+              <p class="form-note">Evite inserir diagnósticos, exames, documentos ou outras informações clínicas sensíveis neste formulário.</p>
+              <button class="button" type="submit">Enviar mensagem <span>→</span></button>
+            </form>
           </div>
         </div>
       </section>
 
       <section class="home-cta">
         <div class="container cta-inner">
-          <div><p class="eyebrow light">Vamos conversar?</p><h2>Conte o que você precisa.</h2></div>
+          <div><p class="eyebrow light">Prefere conversar agora?</p><h2>Fale diretamente pelo WhatsApp.</h2></div>
           <a class="button button-light" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20contato%20da%20Health." target="_blank" rel="noopener" data-whatsapp="cta-final">Falar com a Health <span>↗</span></a>
         </div>
       </section>
@@ -86,9 +187,9 @@
       <div class="container footer-grid">
         <a class="brand brand-footer" href="/"><img src="assets/health/logo-health.png" width="900" height="720" alt="" loading="lazy" /><span><b>Health</b><small>Fisioterapia e Bem Estar</small></span></a>
         <p>Guarujá · Baixada Santista · SP</p>
-        <nav aria-label="Links do rodapé"><a href="/sobre">Sobre</a><a href="/servicos">Serviços</a><a href="/fotos">Fotos</a><button type="button" data-privacy>Privacidade</button></nav>
+        <nav aria-label="Links do rodapé"><a href="/sobre">Sobre</a><a href="/servicos">Serviços</a><a href="/fotos">Fotos</a><a href="/aluno">Aluno/Paciente</a><a href="/empresa">Empresa/Estúdio</a><button type="button" data-privacy>Privacidade</button></nav>
       </div>
-      <div class="container footer-bottom"><span>© <span data-year></span> Health.</span><a href="https://www.nassusinfo.com.br" target="_blank" rel="noopener">Desenvolvimento: Lucas Nassuato da Silva — www.nassusinfo.com.br</a></div>
+      <div class="container footer-bottom"><span>© <span data-year></span> Health Fisioterapia e Bem Estar.</span><a href="https://www.nassusinfo.com.br" target="_blank" rel="noopener">Desenvolvimento: Lucas Nassuato da Silva — www.nassusinfo.com.br</a></div>
     </footer>
 
     <a class="whatsapp-float" href="https://wa.me/5513996083907" target="_blank" rel="noopener" aria-label="Falar com a Health pelo WhatsApp" data-whatsapp="flutuante"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.6 12.6 0 0 0-10.8 19L3.5 28.5l6.7-1.7A12.6 12.6 0 1 0 16 3Zm0 22.9c-2 0-3.9-.6-5.5-1.6l-.4-.2-4 .9 1-3.9-.3-.4A10.2 10.2 0 1 1 16 25.9Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.9-.9-3.2-1.7-4.5-3.9-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.3 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.3 1 3.2 1.1 4.3.9.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.2-.2-.4-.3-.7-.4Z" /></svg></a>
@@ -96,8 +197,8 @@
     <dialog id="privacy-dialog">
       <button class="dialog-close" type="button" aria-label="Fechar">×</button>
       <h2>Privacidade e LGPD</h2>
-      <p>Este site não solicita cadastro e não possui banco de dados próprio. Ao escolher falar pelo WhatsApp ou Instagram, o visitante passa a usar os serviços e as políticas de privacidade dessas plataformas.</p>
-      <p>Para dúvidas sobre privacidade, entre em contato com a Health pelo WhatsApp informado neste site.</p>
+      <p>Os dados enviados pelo formulário são utilizados apenas para responder ao contato e são encaminhados ao e-mail da Health por um serviço externo de entrega de formulários. O site não mantém banco de dados próprio com essas mensagens.</p>
+      <p>Não envie diagnósticos, exames, documentos ou dados clínicos sensíveis. Para dúvidas sobre privacidade, escreva para healthfisioterapiaebemestar@gmail.com.</p>
     </dialog>
   </body>
 </html>
