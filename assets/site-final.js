@@ -1,5 +1,28 @@
 const menu = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#main-nav");
+
+// Adiciona o acesso ao painel do aluno em todas as páginas do site.
+if (nav && !nav.querySelector('[data-student-area]')) {
+  const studentLink = document.createElement("a");
+  studentLink.href = "/aluno";
+  studentLink.textContent = "Área do Aluno";
+  studentLink.dataset.studentArea = "true";
+
+  const contactLink = [...nav.querySelectorAll("a")].find(
+    (link) => link.getAttribute("href") === "/contato",
+  );
+  nav.insertBefore(studentLink, contactLink || null);
+
+  if (window.location.pathname === "/aluno" || window.location.pathname === "/aluno.html") {
+    nav.querySelectorAll("a").forEach((link) => {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+    });
+    studentLink.classList.add("active");
+    studentLink.setAttribute("aria-current", "page");
+  }
+}
+
 const closeMenu = () => {
   nav?.classList.remove("open");
   menu?.setAttribute("aria-expanded", "false");
