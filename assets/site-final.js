@@ -1,6 +1,6 @@
 const mobileStylesheet = document.createElement("link");
 mobileStylesheet.rel = "stylesheet";
-mobileStylesheet.href = "/assets/site-mobile.css?v=20260803-mobile-v1";
+mobileStylesheet.href = "/assets/site-mobile.css?v=20260803-mobile-v2";
 mobileStylesheet.media = "(max-width: 767px)";
 document.head.append(mobileStylesheet);
 
