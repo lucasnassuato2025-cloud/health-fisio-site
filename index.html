@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <title>Health Fisioterapia e Bem Estar | Guarujá</title>
-    <meta name="description" content="Fisioterapia, Pilates, Estética Avançada e Depilação a Laser no Guarujá. Atendimento humanizado para a Baixada Santista." />
+    <meta name="description" content="Fisioterapia, Pilates, Estética Avançada, Depilação a Laser e atendimento Home Care no Guarujá e Baixada Santista." />
     <meta name="theme-color" content="#0b315f" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="author" content="Health Fisioterapia e Bem Estar" />
@@ -14,19 +14,20 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:title" content="Health Fisioterapia e Bem Estar | Guarujá" />
-    <meta property="og:description" content="Cuidado especializado para viver com mais movimento e bem-estar." />
+    <meta property="og:description" content="Cuidado especializado na clínica e atendimento fisioterapêutico Home Care." />
     <meta property="og:url" content="https://fisiobemestar.vercel.app/" />
     <meta property="og:site_name" content="Health Fisioterapia e Bem Estar" />
     <meta property="og:image" content="https://fisiobemestar.vercel.app/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Health Fisioterapia e Bem Estar | Guarujá" />
-    <meta name="twitter:description" content="Fisioterapia, Pilates, Estética Avançada e Depilação a Laser no Guarujá." />
+    <meta name="twitter:description" content="Fisioterapia, Pilates, Estética Avançada, Depilação a Laser e Home Care no Guarujá." />
     <meta name="twitter:image" content="https://fisiobemestar.vercel.app/og-image.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/site-final.css?v=20260803-dois-acessos" />
     <link rel="stylesheet" href="assets/site-mobile.css?v=20260803-mobile-v2" media="(max-width: 767px)" />
+    <link rel="stylesheet" href="assets/site-content.css?v=20260803-profissional-v1" />
     <script defer src="assets/site-final.js?v=20260803-mobile-v2"></script>
     <script type="application/ld+json">
       {
@@ -38,6 +39,7 @@
         "image": "https://fisiobemestar.vercel.app/og-image.jpg",
         "logo": "https://fisiobemestar.vercel.app/assets/health/logo-health.png",
         "telephone": "+55 13 99608-3907",
+        "email": "healthfisioterapiaebemestar@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Rua Prof. Waldery de Almeida, 594 - altos",
@@ -47,6 +49,20 @@
           "addressCountry": "BR"
         },
         "areaServed": ["Guarujá", "Baixada Santista"],
+        "employee": {
+          "@type": "Person",
+          "name": "Carolina Paes",
+          "jobTitle": "Fisioterapeuta",
+          "image": "https://fisiobemestar.vercel.app/assets/health/carolina-paes-profissional.jpg",
+          "knowsAbout": ["Fisioterapia hospitalar", "Fisioterapia dermatofuncional", "Pilates", "Atendimento Home Care"]
+        },
+        "availableService": [
+          {"@type": "Service", "name": "Fisioterapia"},
+          {"@type": "Service", "name": "Pilates"},
+          {"@type": "Service", "name": "Estética Avançada"},
+          {"@type": "Service", "name": "Depilação a Laser"},
+          {"@type": "Service", "name": "Atendimento Fisioterapêutico Home Care"}
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+55 13 99608-3907",
@@ -85,7 +101,7 @@
           <div class="hero-copy">
             <p class="eyebrow">Guarujá · Baixada Santista</p>
             <h1>Cuidado especializado para viver com mais <em>movimento.</em></h1>
-            <p class="lead">Fisioterapia, Pilates e Estética Avançada em uma experiência próxima, segura e individualizada.</p>
+            <p class="lead">Fisioterapia, Pilates, Estética Avançada e atendimento Home Care em uma experiência próxima, segura e individualizada.</p>
             <div class="hero-actions">
               <a class="button" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-whatsapp="hero">Falar com a Health <span>↗</span></a>
               <a class="button button-outline" href="/aluno">Aluno/Paciente <span>→</span></a>
@@ -97,7 +113,7 @@
           </div>
           <div class="hero-media">
             <div class="hero-photo">
-              <img src="assets/health/profissional-recorte.webp" width="602" height="1174" alt="Responsável pela clínica Health Fisioterapia e Bem Estar" fetchpriority="high" decoding="async" />
+              <img src="assets/health/profissional-recorte.webp" width="602" height="1174" alt="Carolina Paes, responsável pela Health Fisioterapia e Bem Estar" fetchpriority="high" decoding="async" />
             </div>
             <div class="hero-logo">
               <img src="assets/health/logo-health.png" width="900" height="720" alt="Health Fisioterapia e Bem Estar" decoding="async" />
@@ -115,11 +131,36 @@
             </div>
             <a class="text-link desktop-link" href="/servicos">Ver detalhes →</a>
           </header>
-          <div class="service-grid">
+          <div class="service-grid service-grid-five">
             <article><span>01</span><h3>Fisioterapia</h3><p>Prevenção, tratamento e recuperação de movimentos.</p></article>
             <article><span>02</span><h3>Pilates</h3><p>Força, mobilidade, equilíbrio e consciência corporal.</p></article>
             <article><span>03</span><h3>Estética Avançada</h3><p>Protocolos faciais e corporais individualizados.</p></article>
             <article><span>04</span><h3>Depilação a Laser</h3><p>Tecnologia e acompanhamento profissional.</p></article>
+            <article class="service-homecare"><span>05</span><h3>Home Care</h3><p>Atendimento fisioterapêutico domiciliar mediante avaliação e agendamento.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="professional-home" aria-labelledby="profissional-title">
+        <div class="container professional-grid">
+          <figure class="professional-photo">
+            <img src="assets/health/carolina-paes-profissional.jpg" width="360" height="480" alt="Dra. Carolina Paes, fisioterapeuta responsável pela Health" loading="lazy" decoding="async" />
+          </figure>
+          <div class="professional-copy">
+            <p class="eyebrow">Responsável pela Health</p>
+            <h2 id="profissional-title">Cuidado conduzido por uma profissional especializada.</h2>
+            <p class="professional-name">Dra. Carolina Paes</p>
+            <p class="professional-role">Fisioterapeuta · Responsável pela Health Fisioterapia e Studio de Pilates</p>
+            <p>Atendimento próximo, individualizado e direcionado às necessidades de cada pessoa, tanto na clínica quanto em atendimento domiciliar.</p>
+            <ul class="credential-list">
+              <li>Especialista Hospitalar — Albert Einstein</li>
+              <li>Especialista em Dermato Funcional — UNICID</li>
+              <li>Atuação em Fisioterapia, Pilates e atendimento Home Care</li>
+            </ul>
+            <div class="professional-actions">
+              <a class="button" href="/sobre">Conheça a profissional <span>→</span></a>
+              <a class="button button-outline" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina." target="_blank" rel="noopener" data-whatsapp="profissional">Agendar avaliação <span>↗</span></a>
+            </div>
           </div>
         </div>
       </section>
@@ -130,11 +171,11 @@
             <p class="eyebrow light">Parcerias e facilidades</p>
             <h2 id="partners-title">Mais possibilidades para cuidar de você.</h2>
             <p>A Health atende por meio de parcerias e benefícios. Consulte com a equipe os planos, serviços elegíveis e a disponibilidade.</p>
-            <div class="service-pills"><span>Fisioterapia</span><span>Pilates</span><span>Estética Avançada</span><span>Depilação a Laser</span></div>
+            <div class="service-pills"><span>Fisioterapia</span><span>Pilates</span><span>Estética Avançada</span><span>Depilação a Laser</span><span>Home Care</span></div>
           </div>
           <div class="partner-list">
             <article class="partner-aampesp">
-              <img src="assets/health/aampesp.webp" width="504" height="563" alt="AAMPESP — nova parceria" loading="lazy" decoding="async" />
+              <img src="assets/health/aampesp.webp" width="504" height="563" alt="AAMPESP — clínica parceira" loading="lazy" decoding="async" />
               <div><b>AAMPESP</b><span>Clínica parceira</span></div>
             </article>
             <article><b>TotalPass</b><span>Consulte seu plano</span></article>
@@ -158,10 +199,29 @@
         </div>
       </section>
 
+      <section class="homecare-highlight" aria-labelledby="homecare-title">
+        <div class="container homecare-grid">
+          <div>
+            <p class="eyebrow light">Atendimento domiciliar</p>
+            <h2 id="homecare-title">Fisioterapia Home Care com conforto e atenção individual.</h2>
+            <p>Atendimento no domicílio para pessoas que necessitam de acompanhamento profissional com mais segurança, praticidade e comodidade.</p>
+            <a class="button button-light" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20Home%20Care." target="_blank" rel="noopener" data-whatsapp="home-care">Consultar Home Care <span>↗</span></a>
+          </div>
+          <div class="homecare-card">
+            <ul>
+              <li>Atendimento mediante avaliação prévia</li>
+              <li>Plano de cuidado individualizado</li>
+              <li>Disponibilidade consultada diretamente com a equipe</li>
+              <li>Atendimento no Guarujá e região, conforme disponibilidade</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section class="home-cta">
         <div class="container cta-inner">
           <div><p class="eyebrow light">Seu próximo passo</p><h2>Converse diretamente com a equipe Health.</h2></div>
-          <a class="button button-light" href="https://wa.me/5513996083907?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Health." target="_blank" rel="noopener" data-whatsapp="cta-final">WhatsApp (13) 99608-3907 <span>↗</span></a>
+          <a class="button button-light" href="/contato#formulario">Enviar uma mensagem <span>→</span></a>
         </div>
       </section>
     </main>
@@ -169,7 +229,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <a class="brand brand-footer" href="/"><img src="assets/health/logo-health.png" width="900" height="720" alt="" loading="lazy" decoding="async" /><span><b>Health</b><small>Fisioterapia e Bem Estar</small></span></a>
-        <p>Atendimento em fisioterapia, Pilates e estética no Guarujá.</p>
+        <p>Fisioterapia, Pilates, estética e Home Care no Guarujá.</p>
         <nav aria-label="Links do rodapé">
           <a href="/sobre">Sobre</a><a href="/servicos">Serviços</a><a href="/fotos">Fotos</a><a href="/contato">Contato</a><a href="/aluno">Aluno/Paciente</a><a href="/empresa">Empresa/Estúdio</a><button type="button" data-privacy>Privacidade</button>
         </nav>
@@ -180,15 +240,13 @@
       </div>
     </footer>
 
-    <a class="whatsapp-float" href="https://wa.me/5513996083907" target="_blank" rel="noopener" aria-label="Falar com a Health pelo WhatsApp" data-whatsapp="flutuante">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.6 12.6 0 0 0-10.8 19L3.5 28.5l6.7-1.7A12.6 12.6 0 1 0 16 3Zm0 22.9c-2 0-3.9-.6-5.5-1.6l-.4-.2-4 .9 1-3.9-.3-.4A10.2 10.2 0 1 1 16 25.9Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.9-.9-3.2-1.7-4.5-3.9-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.3 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.3 1 3.2 1.1 4.3.9.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.2-.2-.4-.3-.7-.4Z" /></svg>
-    </a>
+    <a class="whatsapp-float" href="https://wa.me/5513996083907" target="_blank" rel="noopener" aria-label="Falar com a Health pelo WhatsApp" data-whatsapp="flutuante"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.6 12.6 0 0 0-10.8 19L3.5 28.5l6.7-1.7A12.6 12.6 0 1 0 16 3Zm0 22.9c-2 0-3.9-.6-5.5-1.6l-.4-.2-4 .9 1-3.9-.3-.4A10.2 10.2 0 1 1 16 25.9Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.9-.9-3.2-1.7-4.5-3.9-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.3 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.3 1 3.2 1.1 4.3.9.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.2-.2-.4-.3-.7-.4Z" /></svg></a>
 
     <dialog id="privacy-dialog">
       <button class="dialog-close" type="button" aria-label="Fechar">×</button>
       <h2>Privacidade e LGPD</h2>
-      <p>Este site não solicita cadastro e não possui banco de dados próprio. Ao escolher falar pelo WhatsApp, Instagram ou acessar uma plataforma externa, o visitante passa a usar os serviços e as políticas de privacidade dessas plataformas.</p>
-      <p>Para dúvidas sobre privacidade, entre em contato com a Health pelo WhatsApp informado neste site.</p>
+      <p>Este site não solicita cadastro próprio. Ao falar pelo WhatsApp, Instagram, formulário ou acessar uma plataforma externa, o visitante também utiliza os serviços e as políticas dessas plataformas.</p>
+      <p>Para dúvidas sobre privacidade, fale com a Health pelo WhatsApp ou pelo e-mail healthfisioterapiaebemestar@gmail.com.</p>
     </dialog>
   </body>
 </html>
