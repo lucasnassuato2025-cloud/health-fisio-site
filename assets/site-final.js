@@ -135,3 +135,63 @@ if (gallery) {
   gallery.addEventListener("scroll", updateGallery, { passive: true });
   updateGallery();
 }
+
+const carolinaLinkedIn = "https://www.linkedin.com/in/carolina-paes-0108511b8/";
+const professionalActions = document.querySelector(
+  ".professional-home .professional-actions",
+);
+
+if (
+  professionalActions &&
+  !professionalActions.querySelector('a[href*="linkedin.com/in/carolina-paes"]')
+) {
+  const linkedInButton = document.createElement("a");
+  linkedInButton.className = "button button-outline";
+  linkedInButton.href = carolinaLinkedIn;
+  linkedInButton.target = "_blank";
+  linkedInButton.rel = "noopener noreferrer";
+  linkedInButton.setAttribute(
+    "aria-label",
+    "Ver perfil profissional da Dra. Carolina Paes no LinkedIn",
+  );
+  linkedInButton.innerHTML =
+    '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.3 7.8H1.7V22h3.6V7.8ZM3.5 2A2.1 2.1 0 1 0 3.5 6.2 2.1 2.1 0 0 0 3.5 2ZM22 13.9c0-4.3-2.3-6.3-5.3-6.3-2.4 0-3.5 1.3-4.1 2.2v-2H9V22h3.6v-7c0-1.8.3-3.6 2.6-3.6 2.2 0 2.3 2.1 2.3 3.7V22H22v-8.1Z" /></svg><span>LinkedIn profissional</span>';
+  professionalActions.append(linkedInButton);
+}
+
+const professionalHomeImage = document.querySelector(
+  '.professional-home .professional-photo img[src*="carolina-paes-profissional"]',
+);
+
+professionalHomeImage?.addEventListener("error", () => {
+  professionalHomeImage.src = "/assets/health/profissional-recorte.webp";
+  professionalHomeImage.width = 602;
+  professionalHomeImage.height = 1174;
+});
+
+if (document.querySelector(".professional-home")) {
+  const personSchema = document.createElement("script");
+  personSchema.type = "application/ld+json";
+  personSchema.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Carolina Paes",
+    jobTitle: "Fisioterapeuta especialista hospitalar e em Dermato Funcional",
+    worksFor: {
+      "@type": "MedicalClinic",
+      name: "Health Fisioterapia e Bem Estar",
+      url: "https://fisiobemestar.vercel.app/",
+    },
+    knowsAbout: [
+      "Fisioterapia hospitalar",
+      "Fisioterapia dermatofuncional",
+      "Pilates",
+      "Atendimento Home Care",
+    ],
+    sameAs: [
+      "https://www.instagram.com/health_fisio/",
+      carolinaLinkedIn,
+    ],
+  });
+  document.head.append(personSchema);
+}
