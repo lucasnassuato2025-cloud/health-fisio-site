@@ -1,47 +1,35 @@
+const mobileStylesheet = document.createElement("link");
+mobileStylesheet.rel = "stylesheet";
+mobileStylesheet.href = "/assets/site-mobile.css?v=20260803-mobile-v1";
+mobileStylesheet.media = "(max-width: 767px)";
+document.head.append(mobileStylesheet);
+
 const menu = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#main-nav");
-
-// Adiciona o acesso ao painel do aluno em todas as páginas do site.
-if (nav && !nav.querySelector('[data-student-area]')) {
-  const studentLink = document.createElement("a");
-  studentLink.href = "/aluno";
-  studentLink.textContent = "Área do Aluno";
-  studentLink.dataset.studentArea = "true";
-
-  const contactLink = [...nav.querySelectorAll("a")].find(
-    (link) => link.getAttribute("href") === "/contato",
-  );
-  nav.insertBefore(studentLink, contactLink || null);
-
-  if (window.location.pathname === "/aluno" || window.location.pathname === "/aluno.html") {
-    nav.querySelectorAll("a").forEach((link) => {
-      link.classList.remove("active");
-      link.removeAttribute("aria-current");
-    });
-    studentLink.classList.add("active");
-    studentLink.setAttribute("aria-current", "page");
-  }
-}
 
 const closeMenu = () => {
   nav?.classList.remove("open");
   menu?.setAttribute("aria-expanded", "false");
   menu?.setAttribute("aria-label", "Abrir menu");
 };
+
 menu?.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
   menu.setAttribute("aria-expanded", String(open));
   menu.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
 });
+
 nav
   ?.querySelectorAll("a")
   .forEach((link) => link.addEventListener("click", closeMenu));
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && nav?.classList.contains("open")) {
     closeMenu();
     menu?.focus();
   }
 });
+
 document.addEventListener("click", (event) => {
   if (
     nav?.classList.contains("open") &&
@@ -51,23 +39,29 @@ document.addEventListener("click", (event) => {
     closeMenu();
   }
 });
+
 document
   .querySelectorAll("[data-year]")
   .forEach((el) => (el.textContent = new Date().getFullYear()));
+
 const dialog = document.querySelector("#privacy-dialog");
 let dialogTrigger;
+
 document.querySelectorAll("[data-privacy]").forEach((button) =>
   button.addEventListener("click", () => {
     dialogTrigger = button;
     dialog?.showModal();
   }),
 );
+
 dialog
   ?.querySelector(".dialog-close")
   ?.addEventListener("click", () => dialog.close());
+
 dialog?.addEventListener("click", (event) => {
   if (event.target === dialog) dialog.close();
 });
+
 dialog?.addEventListener("close", () => dialogTrigger?.focus());
 
 document.querySelectorAll("[data-whatsapp]").forEach((link) => {
@@ -75,6 +69,7 @@ document.querySelectorAll("[data-whatsapp]").forEach((link) => {
     const location = link.dataset.whatsapp || "nao_identificado";
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: "whatsapp_click", location });
+
     if (typeof window.gtag === "function") {
       window.gtag("event", "whatsapp_click", {
         event_category: "contato",
@@ -83,15 +78,22 @@ document.querySelectorAll("[data-whatsapp]").forEach((link) => {
     }
   });
 });
+
 const gallery = document.querySelector("[data-gallery]");
+
 if (gallery) {
   const cards = [...gallery.querySelectorAll("figure")];
   const progress = document.querySelector("[data-gallery-progress]");
   const status = document.querySelector("[data-gallery-status]");
   const step = () => Math.min(436, Math.max(294, window.innerWidth * 0.82));
+
   const updateGallery = () => {
     const max = Math.max(1, gallery.scrollWidth - gallery.clientWidth);
-    progress.style.width = `${10 + (gallery.scrollLeft / max) * 90}%`;
+
+    if (progress) {
+      progress.style.width = `${10 + (gallery.scrollLeft / max) * 90}%`;
+    }
+
     const centers = cards.map((card) =>
       Math.abs(
         card.offsetLeft +
@@ -100,28 +102,36 @@ if (gallery) {
       ),
     );
     const current = centers.indexOf(Math.min(...centers)) + 1;
-    status.textContent = `Foto ${current} de ${cards.length}`;
+
+    if (status) {
+      status.textContent = `Foto ${current} de ${cards.length}`;
+    }
   };
+
   document
     .querySelector("[data-gallery-next]")
     ?.addEventListener("click", () =>
       gallery.scrollBy({ left: step(), behavior: "smooth" }),
     );
+
   document
     .querySelector("[data-gallery-prev]")
     ?.addEventListener("click", () =>
       gallery.scrollBy({ left: -step(), behavior: "smooth" }),
     );
+
   gallery.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight") {
       event.preventDefault();
       gallery.scrollBy({ left: step(), behavior: "smooth" });
     }
+
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       gallery.scrollBy({ left: -step(), behavior: "smooth" });
     }
   });
+
   gallery.addEventListener("scroll", updateGallery, { passive: true });
   updateGallery();
 }
