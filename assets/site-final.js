@@ -19,6 +19,12 @@ ensureStylesheet({
   href: "/assets/ui-ux-refinements.css?v=20260803-uiux-v1",
 });
 
+ensureStylesheet({
+  selector: 'link[href*="site-full-hd.css"]',
+  href: "/assets/site-full-hd.css?v=20260803-fhd-v1",
+  media: "(min-width: 1440px)",
+});
+
 const menu = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#main-nav");
 
@@ -100,7 +106,7 @@ if (gallery) {
   const cards = [...gallery.querySelectorAll("figure")];
   const progress = document.querySelector("[data-gallery-progress]");
   const status = document.querySelector("[data-gallery-status]");
-  const step = () => Math.min(436, Math.max(294, window.innerWidth * 0.82));
+  const step = () => Math.min(520, Math.max(294, window.innerWidth * 0.82));
 
   const updateGallery = () => {
     const max = Math.max(1, gallery.scrollWidth - gallery.clientWidth);
