@@ -1,8 +1,23 @@
-const mobileStylesheet = document.createElement("link");
-mobileStylesheet.rel = "stylesheet";
-mobileStylesheet.href = "/assets/site-mobile.css?v=20260803-mobile-v2";
-mobileStylesheet.media = "(max-width: 767px)";
-document.head.append(mobileStylesheet);
+const ensureStylesheet = ({ selector, href, media }) => {
+  if (document.querySelector(selector)) return;
+
+  const stylesheet = document.createElement("link");
+  stylesheet.rel = "stylesheet";
+  stylesheet.href = href;
+  if (media) stylesheet.media = media;
+  document.head.append(stylesheet);
+};
+
+ensureStylesheet({
+  selector: 'link[href*="site-mobile.css"]',
+  href: "/assets/site-mobile.css?v=20260803-mobile-v2",
+  media: "(max-width: 767px)",
+});
+
+ensureStylesheet({
+  selector: 'link[href*="ui-ux-refinements.css"]',
+  href: "/assets/ui-ux-refinements.css?v=20260803-uiux-v1",
+});
 
 const menu = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#main-nav");
@@ -146,7 +161,7 @@ if (
   !professionalActions.querySelector('a[href*="linkedin.com/in/carolina-paes"]')
 ) {
   const linkedInButton = document.createElement("a");
-  linkedInButton.className = "button button-outline";
+  linkedInButton.className = "button button-outline professional-linkedin";
   linkedInButton.href = carolinaLinkedIn;
   linkedInButton.target = "_blank";
   linkedInButton.rel = "noopener noreferrer";
@@ -155,9 +170,28 @@ if (
     "Ver perfil profissional da Dra. Carolina Paes no LinkedIn",
   );
   linkedInButton.innerHTML =
-    '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.3 7.8H1.7V22h3.6V7.8ZM3.5 2A2.1 2.1 0 1 0 3.5 6.2 2.1 2.1 0 0 0 3.5 2ZM22 13.9c0-4.3-2.3-6.3-5.3-6.3-2.4 0-3.5 1.3-4.1 2.2v-2H9V22h3.6v-7c0-1.8.3-3.6 2.6-3.6 2.2 0 2.3 2.1 2.3 3.7V22H22v-8.1Z" /></svg><span>LinkedIn profissional</span>';
+    '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.3 7.8H1.7V22h3.6V7.8ZM3.5 2A2.1 2.1 0 1 0 3.5 6.2 2.1 2.1 0 0 0 3.5 2ZM22 13.9c0-4.3-2.3-6.3-5.3-6.3-2.4 0-3.5 1.3-4.1 2.2v-2H9V22h3.6v-7c0-1.8.3-3.6 2.6-3.6 2.2 0 2.3 2.1 2.3 3.7V22H22v-8.1Z" /></svg><span>Perfil profissional no LinkedIn</span>';
   professionalActions.append(linkedInButton);
 }
+
+document
+  .querySelectorAll('a[href*="linkedin.com/in/carolina-paes"]')
+  .forEach((link) => {
+    link.classList.add("professional-linkedin");
+
+    const textNode = [...link.childNodes].find(
+      (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim(),
+    );
+
+    if (textNode) textNode.textContent = " Perfil profissional no LinkedIn";
+  });
+
+document.querySelectorAll(".professional-role").forEach((role) => {
+  role.innerHTML = `
+    <span class="professional-role-main">Fisioterapeuta e responsável pela Health</span>
+    <span class="professional-role-specialties">Especialista Hospitalar · Especialista em Dermato Funcional</span>
+  `;
+});
 
 const professionalHomeImage = document.querySelector(
   '.professional-home .professional-photo img[src*="carolina-paes-profissional"]',
