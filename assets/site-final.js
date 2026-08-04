@@ -25,19 +25,76 @@ ensureStylesheet({
   media: "(min-width: 1440px)",
 });
 
+ensureStylesheet({
+  selector: 'link[href*="header-clean.css"]',
+  href: "/assets/header-clean.css?v=20260803-header-v1",
+});
+
 const menu = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#main-nav");
+
+let accesses;
+let accessesToggle;
+
+if (nav && !nav.querySelector(".nav-accesses")) {
+  const existingStudent = nav.querySelector('a[href="/aluno"], a[href$="/aluno"]');
+  const existingCompany = nav.querySelector('a[href="/empresa"], a[href$="/empresa"]');
+
+  existingStudent?.remove();
+  existingCompany?.remove();
+
+  accesses = document.createElement("div");
+  accesses.className = "nav-accesses";
+  accesses.innerHTML = `
+    <button class="nav-accesses-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+      <span>Acessos</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 7 5 5 5-5" /></svg>
+    </button>
+    <div class="nav-accesses-menu">
+      <a href="/aluno">
+        <span>Aluno/Paciente</span>
+        <small>Acessar o painel do aluno</small>
+      </a>
+      <a href="/empresa">
+        <span>Empresa/Estúdio</span>
+        <small>Acessar o painel profissional</small>
+      </a>
+    </div>
+  `;
+
+  const contactLink = [...nav.querySelectorAll(":scope > a")].find(
+    (link) => link.getAttribute("href") === "/contato",
+  );
+
+  if (contactLink) contactLink.after(accesses);
+  else nav.append(accesses);
+
+  accessesToggle = accesses.querySelector(".nav-accesses-toggle");
+}
+
+const closeAccesses = () => {
+  accesses?.classList.remove("open");
+  accessesToggle?.setAttribute("aria-expanded", "false");
+};
 
 const closeMenu = () => {
   nav?.classList.remove("open");
   menu?.setAttribute("aria-expanded", "false");
   menu?.setAttribute("aria-label", "Abrir menu");
+  closeAccesses();
 };
+
+accessesToggle?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const open = accesses.classList.toggle("open");
+  accessesToggle.setAttribute("aria-expanded", String(open));
+});
 
 menu?.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
   menu.setAttribute("aria-expanded", String(open));
   menu.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  if (!open) closeAccesses();
 });
 
 nav
@@ -45,13 +102,25 @@ nav
   .forEach((link) => link.addEventListener("click", closeMenu));
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && nav?.classList.contains("open")) {
+  if (event.key !== "Escape") return;
+
+  if (accesses?.classList.contains("open")) {
+    closeAccesses();
+    accessesToggle?.focus();
+    return;
+  }
+
+  if (nav?.classList.contains("open")) {
     closeMenu();
     menu?.focus();
   }
 });
 
 document.addEventListener("click", (event) => {
+  if (accesses?.classList.contains("open") && !accesses.contains(event.target)) {
+    closeAccesses();
+  }
+
   if (
     nav?.classList.contains("open") &&
     !nav.contains(event.target) &&
